@@ -80,9 +80,9 @@ const Header = () => {
           <div className='flex items-center ml-2 justify-center h-10 w-10 rounded-full hover:bg-[#303030]/[.8]'>
             <FiBell className='text-white text-xl cursor-pointer' />
           </div>
-          <div className='flex  items-center h-8 w-8 rounded-full overflow-hidden md:ml-4'>
-            <img src='https://api.multiavatar.com/stefan.svg' className='' />
-          </div>
+        </div>
+        <div className='flex  items-center h-8 w-8 rounded-full overflow-hidden md:ml-4'>
+          <img src='https://api.multiavatar.com/stefan.svg' className='' />
         </div>
       </div>
     </div>

@@ -10,8 +10,13 @@ const VideoCard = ({ video }) => {
     <Link to={`/video/${video.videoId}`}>
       <div className='flex flex-col mb-8'>
         <div className='relative h-40 md:h-40 rounded-xl md:rounded-xl overflow-hidden'>
-          <img className='h-full w-full object-covers' src={video?.thumbnails[0]?.url} />
-          {video?.lengthSeconds && (<VideoLength time={video?.lengthSeconds} />)}
+          <img
+            className='h-full w-full object-covers'
+            src={video?.thumbnails[0]?.url}
+          />
+          {video?.lengthSeconds && (
+            <VideoLength time={video?.lengthSeconds} />
+          )}
         </div>
         <div className='flex text-white mt-3'>
           <div className='flex items-center'>
@@ -28,9 +33,15 @@ const VideoCard = ({ video }) => {
               {(video?.author?.badges[0]?.type === 'VERIFIED_CHANNEL') && (<BsFillCheckCircleFill className='text-white/[.5] text-[12px] ml-1' />)}
             </span>
             <div className='flex text-[12px] font-semibold text-white/[.5] truncate overflow-hidden'>
-              <span>{`${abbreviateNumber(video?.stats?.views)} views`}</span>
-              <span className='flex text-[24px] leading-none font-bold text-white/[.6] relative top-[-10px] mx-1'>.</span>
-              <span className='truncate'>{video?.publishedTimeText}</span>
+              <span>
+                {`${abbreviateNumber(video?.stats?.views)} views`}
+              </span>
+              <span className='flex text-[24px] leading-none font-bold text-white/[.6] relative top-[-10px] mx-1'>
+                .
+              </span>
+              <span className='truncate'>
+                {video?.publishedTimeText}
+              </span>
             </div>
           </div>
         </div>

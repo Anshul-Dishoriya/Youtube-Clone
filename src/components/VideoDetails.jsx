@@ -71,8 +71,8 @@ const VideoDetails = () => {
                                     {video?.author?.title}
                                     {video?.author?.badges[0]?.type ===
                                         "VERIFIED_CHANNEL" && (
-                                        <BsFillCheckCircleFill className="text-white/[0.5] text-[12px] ml-1" />
-                                    )}
+                                            <BsFillCheckCircleFill className="text-white/[0.5] text-[12px] ml-1" />
+                                        )}
                                 </div>
                                 <div className="text-white/[0.7] text-sm">
                                     {video?.author?.stats?.subscribersText}
@@ -82,16 +82,20 @@ const VideoDetails = () => {
                         <div className="flex text-white mt-4 md:mt-0">
                             <div className="flex items-center justify-center h-11 px-6 rounded-3xl bg-white/[0.15]">
                                 <AiOutlineLike className="text-xl text-white mr-2" />
-                                {`${abbreviateNumber(
-                                    video?.stats?.views,
-                                    2
-                                )} Likes`}
+                                <span className="text-[12px] md:text-sm">
+                                    {`${abbreviateNumber(
+                                        video?.stats?.likes,
+                                        2
+                                    )} Likes`}
+                                </span>
                             </div>
                             <div className="flex items-center justify-center h-11 px-6 rounded-3xl bg-white/[0.15] ml-4">
-                                {`${abbreviateNumber(
-                                    video?.stats?.views,
-                                    2
-                                )} Views`}
+                                <span className="text-[12px] md:text-sm">
+                                    {`${abbreviateNumber(
+                                        video?.stats?.views,
+                                        2
+                                    )} Views`}
+                                </span>
                             </div>
                         </div>
                     </div>
